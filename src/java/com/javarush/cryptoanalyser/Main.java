@@ -10,9 +10,8 @@ public class Main {
 
         new Dialogue().start();
         new CryptoEncryption().encrypt();
-
+        new Dialogue().startDialogueInDecryption();
 
     }
-
 
 }

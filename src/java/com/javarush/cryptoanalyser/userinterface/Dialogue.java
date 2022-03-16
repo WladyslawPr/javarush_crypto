@@ -1,6 +1,10 @@
 package com.javarush.cryptoanalyser.userinterface;
 
 
+import com.javarush.cryptoanalyser.cryptography.CryptoDecryption;
+
+import java.util.Scanner;
+
 public class Dialogue {
 
 
@@ -16,6 +20,26 @@ public class Dialogue {
             exception.printStackTrace();
         }
 
+
+    }
+
+    public void startDialogueInDecryption () {
+        try (Scanner console = new Scanner(System.in)) {
+            Thread.sleep(2000);
+            System.out.println("If you want to close application - please enter \"exit\"");
+            Thread.sleep(1500);
+            System.out.println("If you want to continue - please enter \"next\"");
+
+                String message = console.nextLine();
+                if (message.equalsIgnoreCase("exit")) {
+                    console.close();
+                    System.out.println("Application closed");
+                } else if (message.equalsIgnoreCase("next")){
+                    new CryptoDecryption().decrypt();
+                }
+        } catch (InterruptedException exception) {
+            exception.printStackTrace();
+        }
 
     }
 

@@ -4,22 +4,17 @@ import java.util.Scanner;
 
 
 public class CryptoEncryption {
-
     String message;
     int shiftKey;
 
     public void encrypt() {
 
-        Scanner console = new Scanner(System.in);
-
         System.out.println("Please enter text to encrypt");
-        message = console.nextLine();
-
+        message = new Scanner(System.in).nextLine();
         System.out.println("Please enter key");
-        shiftKey = console.nextInt();
+        shiftKey = new Scanner(System.in).nextInt(); // if key is not number ? (InputMismatchException)
 
         String cipherText = "";
-
 
         for (int i = 0; i < message.length(); i++) {
             char chars = message.charAt(i);
@@ -51,7 +46,7 @@ public class CryptoEncryption {
             System.out.println("Encryption in progress");
             Thread.sleep(2500);
             System.out.println();
-            System.out.println("Your ciphertext - " + cipherText );
+            System.out.println("Your ciphertext - " + cipherText + "\n" );
 
         } catch(InterruptedException exception) {
             exception.printStackTrace();
