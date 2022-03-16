@@ -1,8 +1,18 @@
 package com.javarush.cryptoanalyser;
 
+
+import com.javarush.cryptoanalyser.cryptography.CryptoEncryption;
+import com.javarush.cryptoanalyser.userinterface.Dialogue;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(" ");
+
+        new Dialogue().start();
+        new CryptoEncryption().encrypt();
+
+
     }
+
+
 }
