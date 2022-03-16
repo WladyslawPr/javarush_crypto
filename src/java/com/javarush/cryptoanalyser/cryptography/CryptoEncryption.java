@@ -28,13 +28,19 @@ public class CryptoEncryption {
                 if (Character.isLowerCase(chars)) {
                     char symbols = (char) ( chars + shiftKey );
                     if (symbols > 'z') {
-                        cipherText += (char) ( symbols - ( 26 - shiftKey ) );
+                        cipherText += (char) ( chars - ( 26 - shiftKey ) );
 
                     } else {
                         cipherText += symbols;
                     }
                 } else if (Character.isUpperCase(chars)) {
+                    char symbols = (char) ( chars + shiftKey );
+                    if (symbols > 'Z') {
+                        cipherText += (char) ( chars - ( 26 - shiftKey ) );
 
+                    } else {
+                        cipherText += symbols;
+                    }
                 }
             } else {
                 cipherText += chars;
