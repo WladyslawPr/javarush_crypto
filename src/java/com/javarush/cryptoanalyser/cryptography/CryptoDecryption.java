@@ -6,11 +6,11 @@ public class CryptoDecryption extends CryptoEncryption {
 
     public void decrypt() {
 
-        System.out.println("If you want to decrypt the text back - please enter the text in encrypted format");
+        System.out.println("If you want to decrypt the text back - please enter the text in encrypted format.");
         message = new Scanner(System.in).nextLine();
-        System.out.println("You must also specify the key - which was specified during encryption");
+        System.out.println("You must also specify the key - which was specified during encryption.");
 
-        System.out.println("Please enter key");
+        System.out.println("Please enter key.");
         shiftKey = new Scanner(System.in).nextInt();
 
         String cipherText = "";
@@ -42,7 +42,7 @@ public class CryptoDecryption extends CryptoEncryption {
         }
 
         try {
-            System.out.println("Decryption in progress");
+            System.out.println("Decryption in progress.");
             Thread.sleep(2500);
             System.out.println();
             System.out.println("Your decryption text - " + cipherText);

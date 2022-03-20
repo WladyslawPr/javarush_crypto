@@ -1,18 +1,21 @@
 package com.javarush.cryptoanalyser.cryptography;
 
+import com.javarush.cryptoanalyser.userinterface.Dialogue;
+
 import java.util.Scanner;
 
 
 public class CryptoEncryption {
-    String message;
-    int shiftKey;
+
+   String message;
+   int shiftKey;
 
     public void encrypt() {
-
-        System.out.println("Please enter text to encrypt");
+        System.out.println("Please enter text to encrypt.");
         message = new Scanner(System.in).nextLine();
-        System.out.println("Please enter key");
-        shiftKey = new Scanner(System.in).nextInt(); // if key is not number ? (InputMismatchException)
+        new Dialogue().startDialogueInEncryption();
+        System.out.println("Please confirm your key again.");
+        shiftKey = new Scanner(System.in).nextInt();
 
         String cipherText = "";
 
@@ -43,14 +46,15 @@ public class CryptoEncryption {
         }
 
         try {
-            System.out.println("Encryption in progress");
+            System.out.println("Encryption in progress.");
             Thread.sleep(2500);
             System.out.println();
-            System.out.println("Your ciphertext - " + cipherText + "\n" );
+            System.out.println("Your cipher text - " + cipherText + "\n" );
 
         } catch(InterruptedException exception) {
             exception.printStackTrace();
         }
     }
+
 }
 
