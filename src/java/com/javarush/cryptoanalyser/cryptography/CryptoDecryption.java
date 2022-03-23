@@ -6,7 +6,7 @@ public class CryptoDecryption extends CryptoEncryption {
 
     public void decrypt() {
 
-        System.out.println("If you want to decrypt the text back - please enter the text in encrypted format.");
+        System.out.println("To decrypt the text back - please enter the text in encrypted format.");
         message = new Scanner(System.in).nextLine();
         System.out.println("You must also specify the key - which was specified during encryption.");
 

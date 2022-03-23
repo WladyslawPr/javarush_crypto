@@ -1,7 +1,6 @@
 package com.javarush.cryptoanalyser.cryptography;
 
 import com.javarush.cryptoanalyser.userinterface.Dialogue;
-
 import java.util.Scanner;
 
 
