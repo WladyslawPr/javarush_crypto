@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="javarush_crypto:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javarush_crypto_jar</output-path>
+    <root id="archive" name="javarush_crypto.jar">
+      <element id="module-output" name="javarush_crypto" />
+    </root>
+  </artifact>
+</component>
